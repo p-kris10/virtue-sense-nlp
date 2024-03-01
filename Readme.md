@@ -16,7 +16,7 @@ This application prompts users with questions, to which they can respond with a 
 The backend of the application is built using Flask, a lightweight web framework for Python. Here's an overview of the backend code:
 
 - **Transcription Endpoint**: The `/transcribe_audio` endpoint transcribes audio responses using the Whisper model. Depending on the transcription, it returns "yes", "no", or "invalid".
-- **Question Retrieval Endpoint**: The `/get_question` endpoint retrieves random questions for users to respond to.
+- **Question Retrieval Endpoint**: The `/get_question` endpoint retrieves random questions for users to respond to (the questions are defined in the `questions.json` file in the backend folder).
 - **Logging**: Responses and their corresponding questions are logged in the `log.txt` file.
 
 ## The UI
@@ -28,8 +28,9 @@ The UI of the assistant is pretty simple, the question is displayed to the user 
 
 
 
-## Dependencies
+## Frameworks and Tools Used
 
 - Flask: Lightweight web framework for Python.
 - Whisper: OpenAI's model for transcription.
+- React: JavaScript library for building user interfaces.
 - Docker: Containerization platform for easy deployment and management.

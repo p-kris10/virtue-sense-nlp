@@ -1,4 +1,4 @@
-# Question Transcription App
+# Voice Assistant App
 
 ## How to Run the App
 
@@ -9,7 +9,7 @@
 
 ## About the App
 
-This application prompts users with questions, to which they can respond with a "yes" or "no". The user's response is sent to the backend, where transcription occurs using the [Whisper model](https://github.com/openai/whisper). Based on the transcription, if the response is determined to be "yes" or "no", it is logged into log.txt file in the backend folder. Otherwise, the user is prompted to answer again. The user is given three attempts to answer yes or no, after which if satisfactory response is not received "invalid" response is logged and the interaction is terminated.
+This application prompts users with questions, to which they can respond with a "yes" or "no". The user's response is sent to the backend, where transcription occurs using the [Whisper model](https://github.com/openai/whisper) (For the sake of faster inference and easy testing on cpu the 'tiny' model is used, it can be changed to 'base','small','medium',etc. for better results based on available vram). Based on the transcription, if the response is determined to be "yes" or "no", it is logged into log.txt file in the backend folder. Otherwise, the user is prompted to answer again. The user is given three attempts to answer yes or no, after which if satisfactory response is not received "invalid" response is logged and the interaction is terminated.
 
 ## Backend Code
 

@@ -9,7 +9,7 @@
 
 ## About the App
 
-This application prompts users with questions, to which they can respond with a "yes" or "no". The user's response is sent to the backend, where transcription occurs using OpenAI's Whisper model. Based on the transcription, if the response is determined to be "yes" or "no", it is logged into log.txt file in the backend folder. Otherwise, the user is prompted to answer again. This process repeats three times, after which an invalid response is logged and the interaction is terminated.
+This application prompts users with questions, to which they can respond with a "yes" or "no". The user's response is sent to the backend, where transcription occurs using the [Whisper model](https://github.com/openai/whisper). Based on the transcription, if the response is determined to be "yes" or "no", it is logged into log.txt file in the backend folder. Otherwise, the user is prompted to answer again. The user is given three attempts to answer yes or no, after which if satisfactory response is not received "invalid" response is logged and the interaction is terminated.
 
 ## Backend Code
 
@@ -18,11 +18,10 @@ The backend of the application is built using Flask, a lightweight web framework
 - **Transcription Endpoint**: The `/transcribe_audio` endpoint transcribes audio responses using the Whisper model. Depending on the transcription, it returns "yes", "no", or "invalid".
 - **Question Retrieval Endpoint**: The `/get_question` endpoint retrieves random questions for users to respond to.
 - **Logging**: Responses and their corresponding questions are logged in the `log.txt` file.
-- **Static HTML Page**: The root endpoint `/` returns a basic HTML page.
 
 ## The UI
 
-The UI of the assistant is pretty simple, the question is displayed to the user as shown in the picture below, it is also read out using react-tts, then the user can press the button to answer the question, based on the correctness of the user's response further instructions are communicated through voice.
+The UI of the assistant is pretty simple, the question is displayed to the user as shown in the picture below, it is also read out using react-tts, then the user can press the button to answer the question, based on the correctness of the user's response further instructions are communicated through voice. Clicking on reset button feteches a new question.
 
 ![UI Screenshot](./images/UI.png)
 

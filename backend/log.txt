@@ -1,2 +1,3 @@
 Is music an important part of your life? : Yes
 Have you ever been to Paris? : No
+Do you like playing musical instruments? : Yes
